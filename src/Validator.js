@@ -70,15 +70,19 @@ class Validator extends Component {
       )
     })
 
+    console.log(this.state)
+
     return (
-      <form className='form' onSubmit={this.handleSubmit}>
+      <div>
         <h1>Sign Up</h1>
-        <div>{messages}</div>
-        <input className='email' type='text' placeholder='email' value={this.state.email} onChange={this.handleEmailChange} />
-        <input className={this.state.passwordsMatch === true ? 'valid' : 'invalid'} type='password' placeholder='password' value={this.state.password} onChange={this.handlePasswordChange} />
-        <input className={this.state.passwordsMatch === true ? 'valid' : 'invalid'} type='password' placeholder='confirm password' value={this.state.confirmPassword} onChange={this.handleConfirmPasswordChange} />
-        <input type='submit' value='Submit' />
-      </form>
+        <form className='form' onSubmit={this.handleSubmit}>
+          <input className='email' type='text' placeholder='email' value={this.state.email} onChange={this.handleEmailChange} />
+          <input className={this.state.passwordsMatch === true ? 'valid' : 'invalid'} type='password' placeholder='password' value={this.state.password} onChange={this.handlePasswordChange} />
+          <input className={this.state.passwordsMatch === true ? 'valid' : 'invalid'} type='password' placeholder='confirm password' value={this.state.confirmPassword} onChange={this.handleConfirmPasswordChange} />
+          <div>{messages}</div>
+          <input type='submit' value='Submit' />
+        </form>
+      </div>
     )
   }
 }
