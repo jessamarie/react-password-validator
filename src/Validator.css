@@ -20,3 +20,11 @@ input {
 input[type="text"], input[type="password"] {
   width: 200px;
 }
+
+.valid {
+  border: 1px solid green;
+}
+
+.invalid {
+  border: 1px solid red;
+}
